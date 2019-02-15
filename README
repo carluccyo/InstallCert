@@ -17,7 +17,7 @@ java InstallCert [host]:[port]
 keytool -exportcert -alias [host]-1 -keystore jssecacerts -storepass changeit -file [host].cer
 
 # Import certificate into system keystore
-keytool -importcert -alias [host] -keystore [path to system keystore] -storepass changeit -file [host].cer
+keytool  -J-Duser.language=en  -importcert -alias [host] -keystore [path to system keystore] -storepass changeit -file [host].cer
 
 # Example:
 java InstallCert woot.com:443
